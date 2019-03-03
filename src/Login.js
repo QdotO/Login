@@ -30,22 +30,29 @@ class Login extends Component {
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Username:
-          <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
-        </label>
-        <br/>
-        <label>
-          Password:
-          <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
-        </label>
-        <br/>
-        <input type="submit" value="Submit" />
-      </form>
-    );
+    return (<form className="box" action="index.html" method="post">
+      <h1>Login</h1>
+      <input type="text" name="" value="" onChange={()=>{this.handleUsernameChange()}} placeholder="Username"/>
+      <input type="password" name="" value="" placeholder="Password"/>
+      <input type="submit" name="" value="Login"/>
+    </form>) 
   }
+    // return (
+    //   <form onSubmit={this.handleSubmit}>
+    //     <label>
+    //       Username:
+    //       <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
+    //     </label>
+    //     <br/>
+    //     <label>
+    //       Password:
+    //       <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
+    //     </label>
+    //     <br/>
+    //     <input type="submit" value="Submit" />
+    //   </form>
+    // );
+  // }
 }
 
 export default Login;
